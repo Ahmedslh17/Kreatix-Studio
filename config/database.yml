@@ -2,22 +2,13 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  url: <%= ENV['DATABASE_URL'] %>
 
 development:
   <<: *default
-  database: kreatix_studio_development
-  username: <YOUR_LOCAL_DB_USERNAME>
-  password: <YOUR_LOCAL_DB_PASSWORD>
-  host: localhost
 
 test:
   <<: *default
-  database: kreatix_studio_test
-  username: <YOUR_LOCAL_DB_USERNAME>
-  password: <YOUR_LOCAL_DB_PASSWORD>
-  host: localhost
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
