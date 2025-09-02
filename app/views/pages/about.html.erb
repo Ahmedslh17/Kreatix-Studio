@@ -1,0 +1,61 @@
+<div class="min-h-screen bg-gradient-to-br from-sky-800 via-sky-900 to-gray-900 text-white px-6 py-20 flex flex-col items-center justify-center relative overflow-hidden">
+
+  <!-- Background discret -->
+  <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-mosaic.png')] opacity-5 z-0"></div>
+
+  <div class="relative max-w-5xl mx-auto space-y-12 z-10 animate-fade-in">
+
+    <!-- Titre -->
+    <div class="text-center drop-shadow-lg">
+      <h1 class="text-6xl font-extrabold text-300 drop-shadow-[0_0_15px_rgba(0,255,255,0.2)]">
+        À propos
+      </h1>
+      <br>
+      <p class="text-2xl text-gray-100 mt-4">
+        Découvrez l’univers de Kreatix Studio !
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="space-y-8">
+
+      <div class="bg-white/5 rounded-2xl shadow-xl p-8 space-y-4 transform transition-transform hover:scale-105 hover:shadow-2xl">
+        <h2 class="text-3xl font-bold text-cyan-300">💡 Qui sommes-nous ?</h2>
+        <p>Kreatix Studio est une micro-entreprise dédiée à la création de sites web modernes et professionnels.</p>
+        <p>Notre objectif est de concevoir des sites efficaces, beaux et rapides, tout en rendant la technologie simple et accessible.</p>
+      </div>
+
+      <div class="bg-white/5 rounded-2xl shadow-xl p-8 space-y-4 transform transition-transform hover:scale-105 hover:shadow-2xl">
+        <h2 class="text-3xl font-bold text-cyan-300">🧑‍💻 Notre expertise</h2>
+        <p>Nous combinons créativité et rigueur technique pour offrir des solutions sur-mesure.</p>
+      </div>
+
+      <div class="bg-white/5 rounded-2xl shadow-xl p-8 space-y-4 transform transition-transform hover:scale-105 hover:shadow-2xl">
+        <h2 class="text-3xl font-bold text-cyan-300">🤝 Pourquoi nous faire confiance ?</h2>
+        <ul class="list-disc pl-6 space-y-2 text-gray-200">
+          <li>Simplicité : sans jargon, tout est clair</li>
+          <li>Transparence : pas de frais cachés</li>
+          <li>Performance : sites rapides et responsives</li>
+          <li>Accompagnement : présent à chaque étape</li>
+        </ul>
+      </div>
+
+      <div class="bg-white/5 rounded-2xl shadow-xl p-8 space-y-4 transform transition-transform hover:scale-105 hover:shadow-2xl">
+        <h2 class="text-3xl font-bold text-cyan-300">🌍 Nos valeurs</h2>
+        <p>Nous croyons en un web plus humain, éthique et respectueux de vos valeurs.</p>
+        <p>Notre priorité : vous offrir un service de qualité avec écoute et bienveillance.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-out both;
+  }
+</style>
