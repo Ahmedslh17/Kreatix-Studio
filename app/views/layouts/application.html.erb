@@ -4,53 +4,52 @@
     <title>Kreatix Studio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <!-- CSS principal compilé par Tailwind -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <!-- Importmap / JS Hotwire -->
+    <%= javascript_importmap_tags %>
   </head>
 
   <body class="bg-white text-gray-900">
+
     <!-- NAVBAR -->
     <nav class="bg-gray-900 border-b border-gray-700 px-6 py-4 flex items-center justify-between">
-  <div class="flex items-center space-x-6">
-    <!-- Logo / Nom -->
-    <a href="/" class="text-cyan-400 font-extrabold text-xl hover:text-cyan-300 transition">
-      Kreatix Studio
-    </a>
+      <div class="flex items-center space-x-6">
+        <!-- Logo / Nom -->
+        <a href="/" class="text-cyan-400 font-extrabold text-xl hover:text-cyan-300 transition">
+          Kreatix Studio
+        </a>
 
-    <!-- Menu principal -->
-    <ul class="hidden md:flex space-x-8 text-gray-300 font-medium">
-      <li><a href="/" class="hover:text-cyan-400 transition">Accueil</a></li>
-      <li><a href="/about" class="hover:text-cyan-400 transition">À propos</a></li>
-      <li><a href="/services" class="hover:text-cyan-400 transition">Services</a></li>
-      <li><a href="/contact" class="hover:text-cyan-400 transition">Contact</a></li>
-    </ul>
-  </div>
+        <!-- Menu principal -->
+        <ul class="hidden md:flex space-x-8 text-gray-300 font-medium">
+          <li><a href="/" class="hover:text-cyan-400 transition">Accueil</a></li>
+          <li><a href="/about" class="hover:text-cyan-400 transition">À propos</a></li>
+          <li><a href="/services" class="hover:text-cyan-400 transition">Services</a></li>
+          <li><a href="/contact" class="hover:text-cyan-400 transition">Contact</a></li>
+        </ul>
+      </div>
 
-  <!-- Bouton action -->
-  <div>
-    <a href="/contact" class="hidden md:inline-block bg-cyan-400 text-gray-900 font-semibold px-5 py-2 rounded-full shadow hover:bg-cyan-300 transition">
-      Demander un devis
-    </a>
-  </div>
+      <!-- Bouton action -->
+      <div>
+        <a href="/contact" class="hidden md:inline-block bg-cyan-400 text-gray-900 font-semibold px-5 py-2 rounded-full shadow hover:bg-cyan-300 transition">
+          Demander un devis
+        </a>
+      </div>
 
-  <!-- Hamburger mobile (optionnel) -->
-  <button class="md:hidden text-cyan-400 focus:outline-none" aria-label="Menu mobile">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-    </svg>
-  </button>
-</nav>
+      <!-- Hamburger mobile -->
+      <button class="md:hidden text-cyan-400 focus:outline-none" aria-label="Menu mobile">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </nav>
 
-
-
-    <!-- Contenu de la page -->
+    <!-- Contenu principal -->
     <main class="p-8">
-
       <%= yield %>
     </main>
+
   </body>
 </html>

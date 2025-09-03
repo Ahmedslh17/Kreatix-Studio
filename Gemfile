@@ -15,9 +15,8 @@ gem "sprockets-rails"
 
 # Use PostgreSQL as the database for Active Record
 # Gemfile
-gem 'sqlite3', '~> 1.5'
-gem 'pg', '~> 1.4', require: false # tu peux commenter ou supprimer pg
-
+gem "sqlite3", "~> 1.5", group: [:development, :test]
+gem "pg", "~> 1.4"
 
 
 # Use the Puma web server [https://github.com/puma/puma]
